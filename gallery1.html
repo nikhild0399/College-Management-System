@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Mansalva&display=swap");
+
+body {
+  background-color: #aeaeae;
+  font-family: Arial, Sans-serif;
+  font-size: 42px;
+}
+
+header {
+  padding: 50px;
+  text-align: center;
+}
+
+
+
+
+p {
+  font-size: 1rem;
+  padding: 0 20%;
+}
+
+/* gallery specific CSS */
+
+.-fx-image-gal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 85%; /* arbitrary valye */
+  margin: 0px auto;
+}
+.-fx-gal-item {
+  width: 30%; /* for 3 columns */
+  margin: 5px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.-fx-gal-image-thumb img {
+  width: 100%;
+  border-radius: 15px;
+  cursor: pointer;
+  -webkit-filter: grayscale(80%);
+  -moz-filter: grayscale(80%);
+  filter: grayscale(80%);
+  transition: all 0.3s ease;
+}
+
+.-fx-gal-image-thumb:hover img {
+  width: 100%;
+  cursor: pointer;
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  filter: grayscale(0%);
+
+  transform: scale(1.2);
+  transition: all 0.5s ease;
+}
+
+.-fx-gal-image-thumb:focus + .-fx-gal-image-big {
+  display: block;
+}
+
+.-fx-gal-image-big {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.-fx-gal-image-big img {
+  max-width: 90vw;
+  position: absolute;
+  box-shadow: 0px 0px 800px 40px rgb(0, 0, 0);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+</style>
+</head>
+<body>
+ <body style="background: linear-gradient(135deg,  #2235e4 ,#d64fa9);"></body>
+
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="containe">
+    <br>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header"><a class="navbar-brand" >College Management System</a>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="home.php">Home</a></li>
+            <li class="active"><a href="about.php">About us</a></li>
+            <li class="active"><a href="contact.php">Contact us</a></li>
+            <li class="active"><a href="info.php">College Information</a></li>
+            <li class="active"><a href="gallery1.html">Gallery</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="studentcorner.php">Student Corner
+    <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="student.php">Insert Records</a></li>
+
+      <li><a href="updatestudent.php">Update Records</a></li>
+      <li><a href="displaystudent.php">Display Records</a></li>
+      <li><a href="studentsearch.php">Search Records</a></li>
+      <li><a href="studentdeleterecord.php">Move Records</a></li>
+
+    </ul>
+  </li>
+  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="staffcorner.php">Staff Corner
+    <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="staff.php">Insert Records</a></li>
+
+      <li><a href="updatestaff.php">Update Records</a></li>
+      <li><a href="staffdisplay.php">Display Records</a></li>
+      <li><a href="searchstaff.php">Search Records</a></li>
+      <li><a href="staffdeleterecord.php">Move Records</a></li>
+    </ul>
+  </li>
+  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="staffcorner.php">Placement Deatil
+    <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+      <li><a href="Placement.PHP">Insert Records</a></li>
+      <li><a href="placementupdate.php">Update Records</a></li>
+      <li><a href="placementsearch.php">Search Records</a></li>
+    </ul>
+  </li>
+       
+            <li class="active"><a href="frmContact1.html"><span class="glyphicon glyphicon-user"></span> Create Account</a></li>
+            <li class="active"><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li>
+          <li class="dropdown">     
+
+      </ul>
+</div>
+</nav>
+  </center>
+  <center><div style="width:800px;height:100px;border:5px solid #000;"><p style="font-size:70px;font-family:open Sans;color:black;">Gallery</p></center></div>
+  <br>
+  <br>
+  
+  <div class="-fx-image-gal">
+  
+    <div class="-fx-gal-item">
+      <div class="-fx-gal-image-thumb" tabindex="1">
+        <img src="https://i.ibb.co/f9qVqnR/IMG-20220202-111831.jpg" />
+      </div>
+      <div class="-fx-gal-image-big">
+        <img src="https://i.ibb.co/f9qVqnR/IMG-20220202-111831.jpg" />
+      </div>
+    </div><!-- /-fx-gal-item -->
+  
+    <div class="-fx-gal-item">
+      <div class="-fx-gal-image-thumb" tabindex="1">
+        <img src="https://i.ibb.co/tqqfBHx/IMG-20220202-112331.jpg" />
+      </div>
+      <div class="-fx-gal-image-big">
+        <img src="https://i.ibb.co/tqqfBHx/IMG-20220202-112331.jpg" />
+      </div>
+    </div><!-- /-fx-gal-item -->
+  
+    <div class="-fx-gal-item">
+      <div class="-fx-gal-image-thumb" tabindex="1">
+        <img src="https://i.ibb.co/jV93dLD/IMG-20220202-111819.jpg" />
+      </div>
+      <div class="-fx-gal-image-big">
+        <img src="https://i.ibb.co/jV93dLD/IMG-20220202-111819.jpg" />
+      </div>
+    </div><!-- /-fx-gal-item -->
+  
+    <div class="-fx-gal-item">
+      <div class="-fx-gal-image-thumb" tabindex="1">
+        <img src="https://i.ibb.co/gJzTbfW/IMG-20220202-112309.jpg" />
+      </div>
+      <div class="-fx-gal-image-big">
+        <img src="https://i.ibb.co/gJzTbfW/IMG-20220202-112309.jpg" />
+      </div>
+    </div><!-- /-fx-gal-item -->
+  
+    <div class="-fx-gal-item">
+      <div class="-fx-gal-image-thumb" tabindex="1">
+        <img src="https://i.ibb.co/VpbCp0z/IMG-20220202-112253.jpg" />
+      </div>
+      <div class="-fx-gal-image-big">
+        <img src="https://i.ibb.co/VpbCp0z/IMG-20220202-112253.jpg" />
+      </div>
+    </div><!-- /-fx-gal-item -->
+  
+    <div class="-fx-gal-item">
+      <div class="-fx-gal-image-thumb" tabindex="1">
+        <img src="https://i.ibb.co/0QBSmMX/IMG-20220202-111952.jpg" />
+      </div>
+      <div class="-fx-gal-image-big">
+        <img src="https://i.ibb.co/0QBSmMX/IMG-20220202-111952.jpg" />
+      </div>
+    </div><!-- /-fx-gal-item -->
+    <div class="-fx-gal-item">
+        <div class="-fx-gal-image-thumb" tabindex="1">
+          <img src="https://i.ibb.co/FgrwWqD/IMG-20220202-112056.jpg" />
+        </div>
+        <div class="-fx-gal-image-big">
+          <img src="https://i.ibb.co/FgrwWqD/IMG-20220202-112056.jpg" />
+        </div>
+      </div><!-- /-fx-gal-item -->
+      <div class="-fx-gal-item">
+        <div class="-fx-gal-image-thumb" tabindex="1">
+          <img src="https://i.ibb.co/3MQfp1H/IMG-20220202-112150.jpg" />
+        </div>
+        <div class="-fx-gal-image-big">
+          <img src="https://i.ibb.co/3MQfp1H/IMG-20220202-112150.jpg" />
+        </div>
+      </div><!-- /-fx-gal-item -->
+      <div class="-fx-gal-item">
+        <div class="-fx-gal-image-thumb" tabindex="1">
+          <img src="https://i.ibb.co/1TsMJ8M/IMG-20220202-111912.jpg" />
+        </div>
+        <div class="-fx-gal-image-big">
+          <img src="https://i.ibb.co/1TsMJ8M/IMG-20220202-111912.jpg" />
+        </div>
+      </div><!-- /-fx-gal-item -->
+      
+      <div class="-fx-gal-item">
+        <div class="-fx-gal-image-thumb" tabindex="1">
+          <img src="https://i.ibb.co/MsVwMjH/d3088a52-5189-4c34-80f9-cf59117c1d70.jpg" />
+        </div>
+        <div class="-fx-gal-image-big">
+          <img src="https://i.ibb.co/MsVwMjH/d3088a52-5189-4c34-80f9-cf59117c1d70.jpg" />
+        </div>
+      </div><!-- /-fx-gal-item -->
+      <div class="-fx-gal-item">
+        <div class="-fx-gal-image-thumb" tabindex="1">
+          <img src="https://i.ibb.co/hYgjBqp/mainfall.jpg"  />
+        </div>
+        <div class="-fx-gal-image-big">
+          <img src="https://i.ibb.co/hYgjBqp/mainfall.jpg" />
+        </div>
+      </div><!-- /-fx-gal-item -->
+      <div class="-fx-gal-item">
+        <div class="-fx-gal-image-thumb" tabindex="1">
+          <img src="https://i.ibb.co/9pgJ8DK/IMG-20220203-161843.jpg"  />
+        </div>
+        <div class="-fx-gal-image-big">
+          <img src="https://i.ibb.co/9pgJ8DK/IMG-20220203-161843.jpg" />
+        </div>
+      </div><!-- /-fx-gal-item -->
+      <div class="-fx-gal-item">
+        <div class="-fx-gal-image-thumb" tabindex="1">
+          <img src="https://i.ibb.co/4SnbR19/IMG-20220203-161922.jpg" />
+        </div>
+        <div class="-fx-gal-image-big">
+          <img src="https://i.ibb.co/4SnbR19/IMG-20220203-161922.jpg" />
+        </div>
+      </div><!-- /-fx-gal-item -->
+      
+  </div><!-- /gallery -->
+  
+  <div style="height: 50vh"></div>
